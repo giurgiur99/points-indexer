@@ -4,11 +4,11 @@ import { IsNotEmpty, IsNumber, IsString, validateSync } from 'class-validator';
 class EnvironmentVariables {
   @IsString()
   @IsNotEmpty()
-  RPC_URL: string;
+  ETHEREUM_RPC_URL: string;
 
   @IsString()
   @IsNotEmpty()
-  MORPHO_CONTRACT_ADDRESS: string;
+  ETHEREUM_MORPHO_CONTRACT_ADDRESS: string;
 
   @IsString()
   @IsNotEmpty()

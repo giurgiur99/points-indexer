@@ -1,14 +1,7 @@
 export default () => ({
   port: parseInt(process.env.PORT, 10) || 3000,
-  network: {
-    rpcUrl: process.env.RPC_URL,
-    morphoContractAddress: process.env.MORPHO_CONTRACT_ADDRESS,
-  },
-  database: {
-    host: process.env.DB_HOST,
-    port: parseInt(process.env.DB_PORT, 10) || 5432,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    name: process.env.DB_NAME,
+  ethereum: {
+    rpcUrl: process.env.ETHEREUM_RPC_URL,
+    contractAddress: process.env.ETHEREUM_MORPHO_CONTRACT_ADDRESS,
   },
 });

@@ -6,6 +6,11 @@ export interface MarketParams {
   lltv: bigint;
 }
 
+export interface CreateMarketEvent {
+  id: string;
+  marketParams: MarketParams;
+}
+
 export interface BorrowEvent {
   id: string;
   caller: string;
@@ -23,7 +28,17 @@ export interface RepayEvent {
   shares: bigint;
 }
 
-export interface CreateMarketEvent {
-  id: string;
-  marketParams: MarketParams;
+export interface MarketData {
+  totalBorrowShares: string;
+  totalSupplyShares: string;
+  totalBorrowAssets: string;
+  totalSupplyAssets: string;
+  lastUpdate: string;
+  fee: string;
+}
+
+export interface PositionData {
+  borrowShares: string;
+  supplyShares: string;
+  collateral: string;
 }
